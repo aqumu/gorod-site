@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>«Город» — система самообороны на улицах</title>
+  <meta name="description" content="Система самообороны «Город» на основе боевой русской системы «СБОР». Уверенность, спокойствие и умение защитить себя и близких." />
+  <meta name="theme-color" content="#16130d" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content="«Город» — система самообороны на улицах" />
+  <meta property="og:description" content="Уверенность, спокойствие и умение защитить себя и близких. На основе боевой русской системы «СБОР»." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Golos+Text:wght@400;500;600;700&family=PT+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <!-- Собирается из src/input.css: npm run build -->
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+
+<body>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:z-[60] focus:top-2 focus:left-2 focus:px-4 focus:py-2 focus:bg-ink focus:text-white focus:rounded-sm">К содержанию</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="sticky top-0 z-50 bg-paper/95 backdrop-blur border-b border-black/10">
+    <div class="wrap flex items-center justify-between gap-4 py-3">
+      <a href="#top" class="flex-none">
+        <img src="assets/logo-mid.png" width="466" height="200" alt="ГОРОД — система самообороны" class="h-11 w-auto block" />
+      </a>
+
+      <div class="flex items-center gap-2 lg:gap-5 xl:gap-7">
+        <!-- desktop nav -->
+        <div class="hidden lg:flex items-center gap-5 xl:gap-7">
+          <nav aria-label="Основное меню" class="flex items-center gap-4 xl:gap-6 text-sm font-medium text-[#46413a]">
+            <a href="#sistema" class="py-1 transition-colors hover:text-brand">О системе</a>
+            <a href="#sbor" class="py-1 transition-colors hover:text-brand">«СБОР»</a>
+            <a href="#programmy" class="py-1 transition-colors hover:text-brand">Программы</a>
+            <a href="#klub" class="py-1 transition-colors hover:text-brand">Клуб</a>
+            <a href="#galereya" class="py-1 transition-colors hover:text-brand">Галерея</a>
+            <a href="#otzyvy" class="py-1 transition-colors hover:text-brand">Отзывы</a>
+          </nav>
+          <a href="tel:+79000000000" class="font-display text-[17px] font-semibold text-ink whitespace-nowrap">+7 900 000-00-00</a>
+          <a href="#zayavka" class="btn-brand h-11 px-5 text-sm">Записаться</a>
+        </div>
+
+        <img src="assets/icon-michael.webp" width="99" height="132" alt="Икона архангела Михаила" title="Архангел Михаил" class="block h-11 w-auto flex-none rounded-[2px] ring-1 ring-[#8c6a2c]/70 shadow-[0_1px_3px_rgba(22,19,13,.3)]" />
+
+        <!-- burger -->
+        <button id="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu" class="lg:hidden inline-flex flex-col items-center justify-center gap-1.5 w-11 h-11 -mr-2">
+          <span class="block h-0.5 w-6 bg-ink transition-all"></span>
+          <span class="block h-0.5 w-6 bg-ink transition-all"></span>
+          <span class="block h-0.5 w-6 bg-ink transition-all"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-black/10 bg-paper max-h-[calc(100svh-var(--header-h))] overflow-y-auto">
+      <div class="wrap py-4">
+        <nav aria-label="Мобильное меню" class="flex flex-col text-base font-medium text-[#46413a]">
+          <a href="#sistema" class="py-3 border-b border-black/5">О системе</a>
+          <a href="#sbor" class="py-3 border-b border-black/5">«СБОР»</a>
+          <a href="#programmy" class="py-3 border-b border-black/5">Программы</a>
+          <a href="#klub" class="py-3 border-b border-black/5">Клуб</a>
+          <a href="#galereya" class="py-3 border-b border-black/5">Галерея</a>
+          <a href="#otzyvy" class="py-3 border-b border-black/5">Отзывы</a>
+        </nav>
+        <div class="flex items-center justify-between flex-wrap gap-4 mt-4">
+          <a href="tel:+79000000000" class="font-display text-lg font-semibold text-ink">+7 900 000-00-00</a>
+          <a href="#zayavka" class="btn-brand px-5 py-2.5 text-sm">Записаться</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="relative min-h-[min(78svh,720px)] flex items-end bg-ink2 overflow-hidden">
+    <div class="absolute inset-0 stripe-dark"></div>
+    <div class="absolute inset-0" style="background:linear-gradient(90deg,rgba(16,14,9,.96) 0%,rgba(16,14,9,.72) 46%,rgba(16,14,9,.25) 100%);"></div>
+    <div class="wrap relative z-10 py-[clamp(48px,7vw,96px)]">
+      <div class="flex items-center gap-3 mb-6">
+        <img src="assets/emblem.png" width="171" height="200" alt="" class="h-10 w-auto" />
+        <span class="font-display text-[13px] font-semibold tracking-[0.26em] uppercase text-white/70">Система самообороны</span>
+      </div>
+      <h1 class="font-display font-semibold uppercase leading-[1.04] tracking-[0.005em] text-[#f5f2ec] m-0 mb-6 max-w-[14ch] text-[clamp(40px,6.4vw,88px)] text-balance">«Город» — защити себя и близких</h1>
+      <p class="text-[clamp(16px,1.5vw,20px)] leading-relaxed text-[#f0ece4]/85 max-w-[34em] m-0">Уйти от захвата или удара, нанести один встречный и спокойно скрыться. Без паники и лишних движений — только уверенное поведение.</p>
+      <p class="font-display text-sm tracking-[0.16em] uppercase text-brandl font-medium mt-4 mb-0">На основе боевой русской системы «СБОР»</p>
+      <div class="flex items-center gap-x-6 gap-y-5 flex-wrap mt-8">
+        <a href="#zayavka" class="btn-brand px-8 py-4 text-base">Оставить заявку</a>
+        <a href="tel:+79000000000" class="inline-flex flex-col leading-tight">
+          <span class="text-[11px] tracking-[0.14em] uppercase text-white/65 font-semibold">или позвоните</span>
+          <span class="font-display text-2xl font-semibold text-[#f5f2ec]">+7 900 000-00-00</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PILLARS ===================== -->
+  <section class="bg-ink text-[#efeae1] border-t border-white/10">
+    <div class="wrap grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-[clamp(28px,4vw,56px)] py-3 sm:py-[clamp(20px,3vw,36px)]">
+      <div class="py-6 border-b border-white/10 lg:border-b-0">
+        <div class="w-2.5 h-2.5 bg-brand rounded-full mb-4"></div>
+        <h2 class="font-display font-semibold uppercase text-xl tracking-wide m-0 mb-2 text-white">Уверенное поведение</h2>
+        <p class="text-[14.5px] leading-relaxed text-[#efeae1]/70 m-0">Спокойствие и контроль вместо паники — основа любой реакции на угрозу.</p>
+      </div>
+      <div class="py-6 border-b border-white/10 lg:border-b-0">
+        <div class="w-2.5 h-2.5 bg-brand rounded-full mb-4"></div>
+        <h2 class="font-display font-semibold uppercase text-xl tracking-wide m-0 mb-2 text-white">Способы защиты</h2>
+        <p class="text-[14.5px] leading-relaxed text-[#efeae1]/70 m-0">Уход от захвата и удара, дистанция, один точный встречный — и выход из ситуации.</p>
+      </div>
+      <div class="py-6 sm:col-span-2 lg:col-span-1">
+        <div class="w-2.5 h-2.5 bg-brand rounded-full mb-4"></div>
+        <h2 class="font-display font-semibold uppercase text-xl tracking-wide m-0 mb-2 text-white">Реальные условия</h2>
+        <p class="text-[14.5px] leading-relaxed text-[#efeae1]/70 m-0">Тренировки строятся вокруг настоящих уличных сценариев, а не спортивных правил.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== О СИСТЕМЕ + ИСТОРИЯ В ЧЕТЫРЁХ КАДРАХ ===================== -->
+  <section id="sistema" class="bg-paper section-y">
+    <div class="wrap">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-[clamp(36px,5vw,72px)] gap-y-6 mb-[clamp(36px,5vw,72px)]">
+        <div>
+          <div class="eyebrow mb-4">О системе</div>
+          <h2 class="h-section text-ink">Действовать без паники и необдуманных шагов</h2>
+        </div>
+        <div class="lg:pt-9">
+          <p class="text-[16.5px] leading-relaxed text-[#46413a] m-0 mb-4">Мы учим грамотно управлять угрозой: оценивать обстановку, держать дистанцию и принимать решения спокойно. Именно этому уделяется главное внимание на тренировках — не агрессии, а владению ситуацией.</p>
+          <p class="text-[16.5px] leading-relaxed text-[#46413a] m-0">Наша цель — чтобы опасные улицы воспринимались просто как улицы, а подозрительные люди не вызывали панического страха. Мы помогаем стать по-настоящему уверенными и готовыми к любым ситуациям.</p>
+        </div>
+      </div>
+
+      <ol class="story">
+        <li class="story-step">
+          <div class="story-caption">
+            <span class="story-num" aria-hidden="true">1</span>
+            <h3 class="story-title">Угроза рядом</h3>
+            <p class="story-text">Вечер, пустая улица, за спиной двое. Вы чувствуете опасность, но не знаете, что делать.</p>
+          </div>
+          <img class="story-panel" src="assets/story/slide-1.webp" width="1174" height="784" loading="lazy" decoding="async" alt="Молодой человек с рюкзаком настороженно оглядывается на городской улице: за его спиной идут двое мужчин в чёрном, один в капюшоне, другой в кепке." />
+        </li>
+        <li class="story-step">
+          <div class="story-caption">
+            <span class="story-num" aria-hidden="true">2</span>
+            <h3 class="story-title">Вы приходите на тренировку</h3>
+            <p class="story-text">С наставником отрабатываете дистанцию, уход от захвата и удара, встречный — в настоящих уличных сценариях.</p>
+          </div>
+          <img class="story-panel" src="assets/story/slide-2.webp" width="1174" height="784" loading="lazy" decoding="async" alt="Тот же молодой человек в зале отрабатывает блок ладонью с наставником; рядом у боксёрского мешка тренируются другие ученики." />
+        </li>
+        <li class="story-step">
+          <div class="story-caption">
+            <span class="story-num" aria-hidden="true">3</span>
+            <h3 class="story-title">Навык срабатывает</h3>
+            <p class="story-text">Когда под угрозой близкие, паники нет. Один точный встречный — и вы выходите из ситуации.</p>
+          </div>
+          <img class="story-panel" src="assets/story/slide-3.webp" width="1174" height="782" loading="lazy" decoding="async" alt="Молодой человек закрывает собой испуганных женщину и ребёнка и наносит нападавшему точный удар в челюсть." />
+        </li>
+        <li class="story-step">
+          <div class="story-caption">
+            <span class="story-num" aria-hidden="true">4</span>
+            <h3 class="story-title">Опасные улицы — просто улицы</h3>
+            <p class="story-text">Вы и ваши близкие в безопасности. Вместо страха — спокойная уверенность.</p>
+          </div>
+          <img class="story-panel" src="assets/story/slide-4.webp" width="1174" height="782" loading="lazy" decoding="async" alt="Молодой человек, женщина и ребёнок спокойно и уверенно смотрят вдаль на фоне города. В углу — логотип «Город, система самообороны»." />
+        </li>
+        <li class="story-step">
+          <div class="story-panel story-end">
+            <p class="font-display font-semibold uppercase text-[clamp(20px,1.7vw,24px)] leading-tight m-0">Первый шаг — пробная тренировка</p>
+            <a href="#zayavka" class="btn-brand px-7 py-3.5 text-base">Оставить заявку</a>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== СБОР ===================== -->
+  <section id="sbor" class="bg-ink2 text-[#efeae1] section-y">
+    <div class="wrap grid grid-cols-1 lg:grid-cols-2 gap-[clamp(36px,5vw,72px)] items-center">
+      <div class="order-2 lg:order-1 aspect-[4/3] w-full rounded-sm overflow-hidden stripe-dark border border-white/10 flex items-end p-[18px]">
+        <span class="font-display text-[11px] leading-snug tracking-[0.1em] uppercase text-white/70 bg-ink2/70 border border-white/15 px-3 py-1.5 rounded-sm">ФОТО — групповая тренировка по системе</span>
+      </div>
+      <div class="order-1 lg:order-2">
+        <img src="assets/emblem.png" width="171" height="200" alt="" class="h-14 w-auto mb-6" />
+        <div class="eyebrow-dark mb-4">Основа подготовки</div>
+        <h2 class="h-section text-white mb-6">Боевая русская система «СБОР»</h2>
+        <p class="text-[16.5px] leading-relaxed text-[#efeae1]/80 m-0 mb-7 max-w-[38em]">«СБОР» — отечественная система ближнего боя, построенная на естественных движениях тела, работе с дистанцией и экономии сил. В её основе не сила и не масса, а структура, баланс и спокойствие. Поэтому она подходит и мужчине, и подростку, и женщине.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-px bg-white/10 border border-white/10 rounded-sm overflow-hidden">
+          <div class="bg-ink2 px-4 py-[18px]"><div class="font-display text-[15px] font-semibold text-white uppercase tracking-wide mb-1">Дистанция</div><div class="text-[13.5px] text-[#efeae1]/70 leading-snug">Чувство расстояния до угрозы</div></div>
+          <div class="bg-ink2 px-4 py-[18px]"><div class="font-display text-[15px] font-semibold text-white uppercase tracking-wide mb-1">Структура</div><div class="text-[13.5px] text-[#efeae1]/70 leading-snug">Устойчивость и расслабленная сила</div></div>
+          <div class="bg-ink2 px-4 py-[18px]"><div class="font-display text-[15px] font-semibold text-white uppercase tracking-wide mb-1">Хладнокровие</div><div class="text-[13.5px] text-[#efeae1]/70 leading-snug">Один встречный — и выход</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ПРОГРАММЫ ===================== -->
+  <section id="programmy" class="bg-paper section-y">
+    <div class="wrap">
+      <div class="flex items-end justify-between gap-x-6 gap-y-4 flex-wrap mb-[clamp(34px,4vw,56px)]">
+        <div>
+          <div class="eyebrow mb-4">Программы обучения</div>
+          <h2 class="h-section text-ink">Курсы под разные задачи</h2>
+        </div>
+        <p class="text-[15.5px] leading-relaxed text-[#6b665d] max-w-[30em] m-0">Начните с того, что ближе вам сейчас — а дальше вы сами почувствуете, куда расти.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-[18px]">
+        <div class="bg-white border border-black/10 rounded-sm p-7 flex flex-col">
+          <div class="font-display text-[13px] tracking-[0.14em] uppercase text-brand font-semibold mb-3.5">8 недель · базовый</div>
+          <h3 class="font-display font-semibold uppercase text-2xl leading-tight text-ink m-0 mb-3">Курс «Улица»</h3>
+          <p class="text-[14.5px] leading-relaxed text-[#56514a] m-0 mb-5 flex-1">Фундамент самообороны: дистанция, уход от захвата и удара, встречный, безопасный выход из ситуации.</p>
+          <a href="#zayavka" data-program="Курс «Улица» (базовый)" class="link-more text-ink hover:text-brand">Записаться →</a>
+        </div>
+        <div class="bg-white border border-black/10 rounded-sm p-7 flex flex-col">
+          <div class="font-display text-[13px] tracking-[0.14em] uppercase text-brand font-semibold mb-3.5">Для женщин</div>
+          <h3 class="font-display font-semibold uppercase text-2xl leading-tight text-ink m-0 mb-3">«Близкие»</h3>
+          <p class="text-[14.5px] leading-relaxed text-[#56514a] m-0 mb-5 flex-1">Реальные сценарии без паники: как защитить себя и тех, кто рядом. Спокойная уверенность вместо страха.</p>
+          <a href="#zayavka" data-program="«Близкие» (для женщин)" class="link-more text-ink hover:text-brand">Записаться →</a>
+        </div>
+        <div class="bg-white border border-black/10 rounded-sm p-7 flex flex-col">
+          <div class="font-display text-[13px] tracking-[0.14em] uppercase text-brand font-semibold mb-3.5">12–17 лет</div>
+          <h3 class="font-display font-semibold uppercase text-2xl leading-tight text-ink m-0 mb-3">Подростки</h3>
+          <p class="text-[14.5px] leading-relaxed text-[#56514a] m-0 mb-5 flex-1">Уверенность, личные границы и умение постоять за себя. Дисциплина и спокойствие важнее, чем кулаки.</p>
+          <a href="#zayavka" data-program="Подростки" class="link-more text-ink hover:text-brand">Записаться →</a>
+        </div>
+        <div class="bg-ink border border-ink rounded-sm p-7 flex flex-col">
+          <div class="font-display text-[13px] tracking-[0.14em] uppercase text-brandl font-semibold mb-3.5">Углублённый</div>
+          <h3 class="font-display font-semibold uppercase text-2xl leading-tight text-white m-0 mb-3">Интенсив «СБОР»</h3>
+          <p class="text-[14.5px] leading-relaxed text-[#efeae1]/75 m-0 mb-5 flex-1">Глубокая работа по системе для тех, кто хочет идти дальше базы и развивать навык всерьёз.</p>
+          <a href="#zayavka" data-program="Интенсив «СБОР»" class="link-more text-white">Записаться →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== КЛУБ ===================== -->
+  <section id="klub" class="bg-paper2 section-y border-y border-black/10">
+    <div class="wrap grid grid-cols-1 lg:grid-cols-2 gap-[clamp(34px,5vw,72px)] items-center">
+      <div>
+        <div class="eyebrow mb-4">Клубная программа</div>
+        <h2 class="h-section text-ink mb-5">Не разовый курс, а постоянная практика</h2>
+        <p class="text-base leading-relaxed text-[#4a453d] m-0">После курса навык важно поддерживать. Клуб — это регулярные тренировки, спарринги по желанию и среда людей, которые рядом и помогают расти. Спокойно, без культа силы.</p>
+      </div>
+      <div class="bg-white border border-black/10 rounded-sm p-[clamp(22px,3vw,38px)]">
+        <ul class="flex flex-col list-none m-0 p-0">
+          <li class="flex items-start gap-3.5 py-3.5 border-b border-black/10"><span class="w-[7px] h-[7px] bg-brand rounded-full mt-[8px] flex-none"></span><span class="text-[15.5px] text-[#3a352e] leading-normal">2–3 открытые тренировки в неделю</span></li>
+          <li class="flex items-start gap-3.5 py-3.5 border-b border-black/10"><span class="w-[7px] h-[7px] bg-brand rounded-full mt-[8px] flex-none"></span><span class="text-[15.5px] text-[#3a352e] leading-normal">Спарринги и сценарная практика по желанию</span></li>
+          <li class="flex items-start gap-3.5 py-3.5 border-b border-black/10"><span class="w-[7px] h-[7px] bg-brand rounded-full mt-[8px] flex-none"></span><span class="text-[15.5px] text-[#3a352e] leading-normal">Сообщество и поддержка наставников</span></li>
+          <li class="flex items-start gap-3.5 py-3.5"><span class="w-[7px] h-[7px] bg-brand rounded-full mt-[8px] flex-none"></span><span class="text-[15.5px] text-[#3a352e] leading-normal">Свободный график — приходите, когда удобно</span></li>
+        </ul>
+        <a href="#zayavka" data-program="Клубная программа" class="btn mt-5 px-6 py-3 bg-ink text-white text-[15px] hover:bg-[#2c2820]">Узнать про клуб</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ФИЛОСОФИЯ + ВОИН ===================== -->
+  <section class="bg-ink2 text-[#efeae1] py-[clamp(72px,9vw,130px)] px-[var(--gutter)]">
+    <div class="max-w-[760px] mx-auto text-center">
+      <img src="assets/warrior.png" width="261" height="360" alt="" class="block h-[120px] w-auto mx-auto mb-7 opacity-50" />
+      <p class="font-serif italic text-[clamp(22px,3vw,34px)] leading-snug text-[#f3eee6] m-0 mb-7 text-balance">Настоящая сила — внутри. Снаружи остаётся только спокойствие.</p>
+      <p class="text-base leading-relaxed text-[#efeae1]/75 m-0 max-w-[34em] mx-auto">И есть один побочный эффект: вы перестаёте испытывать резкий выброс адреналина в тёмных переулках. «Пещеры страха» становятся для вас обычными городскими локациями, а опасные улицы — просто улицами.</p>
+    </div>
+  </section>
+
+  <!-- ===================== ГАЛЕРЕЯ ===================== -->
+  <section id="galereya" class="bg-paper section-y">
+    <div class="wrap">
+      <div class="eyebrow mb-4">Галерея</div>
+      <h2 class="h-section text-ink mb-[clamp(30px,4vw,52px)]">С тренировок</h2>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3.5">
+        <div class="col-span-2 lg:row-span-2 aspect-[16/10] lg:aspect-auto rounded-sm overflow-hidden stripe-light border border-black/10 flex items-end p-4"><span class="ph-label">ФОТО — работа в паре, широкий кадр</span></div>
+        <div class="aspect-square rounded-sm overflow-hidden stripe-light border border-black/10 flex items-end p-3 sm:p-4"><span class="ph-label">ФОТО — стойка</span></div>
+        <div class="aspect-square rounded-sm overflow-hidden stripe-light border border-black/10 flex items-end p-3 sm:p-4"><span class="ph-label">ФОТО — группа</span></div>
+        <div class="aspect-square rounded-sm overflow-hidden stripe-light border border-black/10 flex items-end p-3 sm:p-4"><span class="ph-label">ФОТО — наставник</span></div>
+        <div class="aspect-square rounded-sm overflow-hidden stripe-light border border-black/10 flex items-end p-3 sm:p-4"><span class="ph-label">ФОТО — зал</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ОТЗЫВЫ ===================== -->
+  <section id="otzyvy" class="bg-ink text-[#efeae1] section-y">
+    <div class="wrap">
+      <div class="eyebrow-dark mb-4">Отзывы</div>
+      <h2 class="h-section text-white mb-[clamp(30px,4vw,52px)]">Что говорят ученики</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-[18px]">
+        <figure class="bg-[#1d1a13] border border-white/10 rounded-sm p-7 m-0 flex flex-col">
+          <blockquote class="text-base leading-relaxed text-[#eae5dc] m-0 mb-6 flex-1">«Перестал шарахаться от компаний на вечерней улице. Не потому что „стал бойцом“, а потому что появилась спокойная уверенность.»</blockquote>
+          <figcaption class="flex items-center gap-3"><span aria-hidden="true" class="w-[38px] h-[38px] flex-none rounded-full bg-[#2a261d] border border-white/10 flex items-center justify-center font-display font-semibold text-brandl">А</span><span><span class="block font-display font-semibold text-white text-[15px]">Андрей</span><span class="block text-[12.5px] text-[#efeae1]/65">курс «Улица»</span></span></figcaption>
+        </figure>
+        <figure class="bg-[#1d1a13] border border-white/10 rounded-sm p-7 m-0 flex flex-col">
+          <blockquote class="text-base leading-relaxed text-[#eae5dc] m-0 mb-6 flex-1">«Шла сюда ради безопасности дочери, осталась ради себя. Здесь учат не драться, а не доводить до драки и держать себя в руках.»</blockquote>
+          <figcaption class="flex items-center gap-3"><span aria-hidden="true" class="w-[38px] h-[38px] flex-none rounded-full bg-[#2a261d] border border-white/10 flex items-center justify-center font-display font-semibold text-brandl">М</span><span><span class="block font-display font-semibold text-white text-[15px]">Мария</span><span class="block text-[12.5px] text-[#efeae1]/65">программа «Близкие»</span></span></figcaption>
+        </figure>
+        <figure class="bg-[#1d1a13] border border-white/10 rounded-sm p-7 m-0 flex flex-col">
+          <blockquote class="text-base leading-relaxed text-[#eae5dc] m-0 mb-6 flex-1">«Сын стал спокойнее и собраннее. Меньше показной дерзости, больше внутренней опоры. Для подростка это дорогого стоит.»</blockquote>
+          <figcaption class="flex items-center gap-3"><span aria-hidden="true" class="w-[38px] h-[38px] flex-none rounded-full bg-[#2a261d] border border-white/10 flex items-center justify-center font-display font-semibold text-brandl">С</span><span><span class="block font-display font-semibold text-white text-[15px]">Сергей</span><span class="block text-[12.5px] text-[#efeae1]/65">родитель</span></span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ЗАЯВКА ===================== -->
+  <section id="zayavka" class="bg-paper section-y">
+    <div class="wrap grid grid-cols-1 lg:grid-cols-2 gap-[clamp(36px,5vw,72px)] items-center">
+      <div>
+        <div class="eyebrow mb-4">Первый шаг</div>
+        <h2 class="h-section text-ink mb-5">Запишитесь на пробную тренировку</h2>
+        <p class="text-[16.5px] leading-relaxed text-[#4a453d] m-0 mb-7 max-w-[30em]">Оставьте заявку — мы перезвоним, расскажем про ближайшую группу и подберём программу под вашу задачу. Первое занятие — знакомство, без обязательств.</p>
+        <a href="tel:+79000000000" class="inline-flex flex-col leading-tight">
+          <span class="text-[11px] tracking-[0.16em] uppercase text-[#6b665d] font-semibold">Телефон для записи</span>
+          <span class="font-display text-[clamp(30px,4vw,44px)] font-semibold text-ink">+7 900 000-00-00</span>
+        </a>
+      </div>
+      <div class="bg-ink rounded-sm p-[clamp(22px,3.4vw,44px)]">
+        <form id="leadForm" class="flex flex-col gap-3.5" novalidate>
+          <div>
+            <label for="leadName" class="field-label">Имя</label>
+            <input id="leadName" name="name" type="text" autocomplete="given-name" required placeholder="Как к вам обращаться" aria-describedby="leadNameError" class="field-input" />
+            <p id="leadNameError" class="hidden text-[13px] text-[#f09a9d] mt-1.5 mb-0">Укажите имя, чтобы мы знали, как к вам обращаться.</p>
+          </div>
+          <div>
+            <label for="leadPhone" class="field-label">Телефон</label>
+            <input id="leadPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+7 ___ ___-__-__" aria-describedby="leadPhoneError" class="field-input" />
+            <p id="leadPhoneError" class="hidden text-[13px] text-[#f09a9d] mt-1.5 mb-0">Введите номер телефона полностью, например +7 900 000-00-00.</p>
+          </div>
+          <div>
+            <label for="leadProgram" class="field-label">Программа</label>
+            <select id="leadProgram" name="program" class="field-input">
+              <option>Курс «Улица» (базовый)</option>
+              <option>«Близкие» (для женщин)</option>
+              <option>Подростки</option>
+              <option>Интенсив «СБОР»</option>
+              <option>Клубная программа</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-brand mt-1.5 py-4 text-base disabled:opacity-60 disabled:cursor-wait">Оставить заявку</button>
+          <p id="leadError" role="alert" class="hidden text-sm text-[#f09a9d] leading-normal m-0 text-center">Заявка не отправилась. Попробуйте ещё раз или позвоните: +7 900 000-00-00.</p>
+          <p class="text-xs leading-normal text-[#efeae1]/60 mt-1 mb-0 text-center">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+        </form>
+        <div id="leadSuccess" tabindex="-1" role="status" class="hidden text-center py-5 outline-none">
+          <div class="w-12 h-12 rounded-full border-2 border-brand flex items-center justify-center mx-auto mb-5 text-brandl font-display text-2xl">✓</div>
+          <h3 class="font-display uppercase text-white text-2xl m-0 mb-2.5">Заявка отправлена</h3>
+          <p class="text-[15px] text-[#efeae1]/75 leading-normal m-0 mb-5">Мы свяжемся с вами в ближайшее время.</p>
+          <button id="leadReset" type="button" class="btn bg-transparent border border-white/25 text-[#efeae1] px-5 py-2.5 text-sm hover:border-white/60">Отправить ещё одну</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===================== ФУТЕР ===================== -->
+  <footer id="kontakty" class="bg-ink3 text-[#cfc9bd] pt-[clamp(52px,6vw,84px)] pb-10">
+    <div class="wrap grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-start">
+      <div>
+        <img src="assets/logo-white.png" width="475" height="200" alt="ГОРОД — система самообороны" class="h-[52px] w-auto mb-[18px]" />
+        <p class="text-sm leading-relaxed text-[#cfc9bd]/75 m-0 max-w-[24em]">Система самообороны для города. Уверенность, спокойствие и умение защитить себя и близких.</p>
+      </div>
+      <div>
+        <div class="font-display text-xs tracking-[0.18em] uppercase text-[#cfc9bd]/65 mb-4">Контакты</div>
+        <a href="tel:+79000000000" class="block font-display text-[22px] font-semibold text-white mb-2">+7 900 000-00-00</a>
+        <a href="mailto:hello@gorod-club.ru" class="block text-sm text-[#cfc9bd]/80 mb-2 transition-colors hover:text-white">hello@gorod-club.ru</a>
+        <div class="text-sm text-[#cfc9bd]/80 leading-normal">г. ______, ул. __________, 00<br />Ежедневно 09:00–22:00</div>
+      </div>
+      <div>
+        <div class="font-display text-xs tracking-[0.18em] uppercase text-[#cfc9bd]/65 mb-4">Разделы</div>
+        <div class="flex flex-col gap-2.5 text-sm">
+          <a href="#sistema" class="text-[#cfc9bd]/80 transition-colors hover:text-white">О системе</a>
+          <a href="#sbor" class="text-[#cfc9bd]/80 transition-colors hover:text-white">Система «СБОР»</a>
+          <a href="#programmy" class="text-[#cfc9bd]/80 transition-colors hover:text-white">Программы</a>
+          <a href="#klub" class="text-[#cfc9bd]/80 transition-colors hover:text-white">Клуб</a>
+          <a href="#zayavka" class="text-[#cfc9bd]/80 transition-colors hover:text-white">Записаться</a>
+        </div>
+      </div>
+      <div>
+        <div class="font-display text-xs tracking-[0.18em] uppercase text-[#cfc9bd]/65 mb-4">Мы рядом</div>
+        <div class="aspect-[4/3] rounded-sm stripe-ink border border-white/10 flex items-center justify-center p-3"><span class="font-display text-[11px] tracking-[0.1em] uppercase text-center text-[#cfc9bd]/65">КАРТА — расположение зала</span></div>
+      </div>
+    </div>
+    <div class="wrap mt-9">
+      <div class="pt-[22px] border-t border-white/10 flex justify-between gap-x-4 gap-y-1.5 flex-wrap text-[12.5px] text-[#cfc9bd]/65">
+        <span>© 2026 «Город» — система самообороны</span>
+        <span>Тренировки на основе боевой русской системы «СБОР»</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ---------- меню ----------
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const setMenu = (open) => {
+      mobileMenu.classList.toggle('hidden', !open);
+      burger.setAttribute('aria-expanded', String(open));
+    };
+    burger.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+    mobileMenu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true') {
+        setMenu(false);
+        burger.focus();
+      }
+    });
+
+    // ---------- история: номер текущего кадра подсвечивается при прокрутке ----------
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(
+        (entries) => entries.forEach((en) => en.target.classList.toggle('is-active', en.isIntersecting)),
+        { rootMargin: '-45% 0px -45% 0px' }
+      );
+      document.querySelectorAll('.story-step').forEach((step) => io.observe(step));
+    }
+
+    // ---------- заявка ----------
+    // Пока адрес пуст, заявка НИКУДА не отправляется (демо-режим).
+    // Перед запуском укажите адрес бэкенда/CRM: он получит POST с JSON { name, phone, program }.
+    const LEAD_ENDPOINT = '';
+
+    const form = document.getElementById('leadForm');
+    const success = document.getElementById('leadSuccess');
+    const leadError = document.getElementById('leadError');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const programSelect = document.getElementById('leadProgram');
+
+    // Кнопки «Записаться» в карточках сразу выбирают нужную программу в форме
+    document.querySelectorAll('[data-program]').forEach((a) =>
+      a.addEventListener('click', () => { programSelect.value = a.dataset.program; })
+    );
+
+    const fields = [
+      { input: document.getElementById('leadName'), error: document.getElementById('leadNameError'), valid: (v) => v.trim().length > 0 },
+      { input: document.getElementById('leadPhone'), error: document.getElementById('leadPhoneError'), valid: (v) => v.replace(/\D/g, '').length >= 10 },
+    ];
+    const checkField = ({ input, error, valid }) => {
+      const ok = valid(input.value);
+      error.classList.toggle('hidden', ok);
+      input.setAttribute('aria-invalid', String(!ok));
+      input.classList.toggle('!border-[#f09a9d]', !ok);
+      return ok;
+    };
+    fields.forEach((f) => f.input.addEventListener('input', () => {
+      if (f.input.getAttribute('aria-invalid') === 'true') checkField(f);
+    }));
+
+    async function sendLead(data) {
+      if (!LEAD_ENDPOINT) {
+        console.warn('LEAD_ENDPOINT не задан: заявка не отправлена.', data);
+        return;
+      }
+      const res = await fetch(LEAD_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      leadError.classList.add('hidden');
+      const firstBad = fields.map((f) => (checkField(f) ? null : f)).find(Boolean);
+      if (firstBad) { firstBad.input.focus(); return; }
+
+      submitBtn.disabled = true;
+      try {
+        await sendLead(Object.fromEntries(new FormData(form)));
+        form.classList.add('hidden');
+        success.classList.remove('hidden');
+        success.focus();
+      } catch (err) {
+        leadError.classList.remove('hidden');
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+
+    document.getElementById('leadReset').addEventListener('click', () => {
+      form.reset();
+      success.classList.add('hidden');
+      form.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
